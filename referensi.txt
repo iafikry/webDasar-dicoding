@@ -1,0 +1,41 @@
+color pallet as roma jersey 2021
+home:
+base maroon :#810000
+garis merah: #CE1212
+garis orange : #FF6701
+garis orange 2 : #FEA82F
+garis kuning: #fed82f;
+warna nns : #fff;
+
+away:
+base hijau = #F6F7D7/FFFBDF
+maroon (kerah) = #810000 / AF2D2D / 560D0D
+garis kuning (kerah) = #fed82f;
+warna nns = #1B1717;
+
+baju ijo di undraw : 3ad29f
+===============================================
+foto kucing
+
+zoe gayah:
+Photo by <a href="https://unsplash.com/@zoegayah?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zoë Gayah Jonker</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+ 
+nihal karkala:
+Photo by <a href="https://unsplash.com/@nihalkarkala?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nihal Karkala</a> on <a href="https://unsplash.com/s/photos/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+tim van :
+Photo by <a href="https://unsplash.com/@timmykp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim van der Kuip</a> on <a href="https://unsplash.com/s/photos/cats?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+zane lee:
+Photo by <a href="https://unsplash.com/@zane404?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zane Lee</a> on <a href="https://unsplash.com/s/photos/cats?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+the dragons:
+Photo by <a href="https://unsplash.com/@the3dragons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">The3dragons</a> on <a href="https://unsplash.com/s/photos/kitty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+mali-maede :
+Photo by mali maeder from Pexels
+https://www.pexels.com/@mali
+
+=========================================================================================
+
+Of course cat can do kamehameha. That’s a common kenowledge to know.  
