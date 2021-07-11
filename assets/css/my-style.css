@@ -3,7 +3,18 @@
 * {
   box-sizing: border-box;
 }
-
+.aside {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 5;
+  background-image: url('../image/wave-samping.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.6s;
+  background-color: #F4F9F9;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -52,6 +63,12 @@ body {
 .btn-close {
   color: #fff;
   font-size: 1.5rem;
+}
+.btn-close-aside {
+  color: #1B1717;
+  font-size: 1.5rem;
+  float: right;
+  display: block;
 }
 .box {
   display: flex;
@@ -142,12 +159,13 @@ body {
   background-color: #fc5404;
 }
 header{
-  position: absolute;
+  position: fixed;
   color: #fff;
   top: 0px;
   z-index: 5;
   display: block;
   width: 100%;
+  transition: top 0.5s;
 }
 .header {
   display: flex;
@@ -155,6 +173,7 @@ header{
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
+  transition: all 0.5s;
 }
 a.header-title {
   text-decoration: none;
@@ -250,6 +269,12 @@ section.pattern-2{
     padding: 0 2.5rem;
     line-height: 0.5;
   }
+  .box-profil .box-text {
+    padding-left: 1.5rem;
+  }
+  .box-profil .vertical-line {
+    height: 50px;
+  }
   .box-subtitle {
     font-size: 2.3rem;
   }
@@ -269,8 +294,7 @@ section.pattern-2{
     width: 566px;
   }
   #cat-img-5{
-    width: 100%;
-    height: 650px;
+    width: 500px;
   }
   #cat-img-6{
     width: 450px;
@@ -280,7 +304,11 @@ section.pattern-2{
     margin-top: 3rem;
   }
   .content-3 {
+    margin-top: 2rem;
     width: 50rem;
+  }
+  .content-4 {
+    width: 40rem;
   }
   a.header-title {
     font-size: 2rem;
@@ -288,6 +316,11 @@ section.pattern-2{
   .img-logo {
     width: 65px;
     height: 65px;
+  }
+  .img-profile {
+    /* border: 1px solid #1B1717; */
+    border: 1px solid transparent;
+    border-radius: 50% !important;
   }
   #konten-1{
     padding-top: 10rem;
@@ -319,19 +352,8 @@ section.pattern-2{
     width:87px;
     transition: width 0.5s !important;
   }
-  a.menu-item#menu-2:hover::before{
-    width:140px;
-    transition: width 0.5s !important;
-  }
-  a.menu-item#menu-3:hover::before{
-    width:67px;
-    transition: width 0.5s !important;
-  }
-  .section-2 {
-    position: relative; 
-    z-index: 2; 
-    bottom: 4rem; 
-    left: 5rem;
+  #row-content-4 {
+    justify-content: flex-end;
   }
   .section-3 {
     margin-top: 10rem;
@@ -417,7 +439,7 @@ section.pattern-2{
     text-align: center;
     align-items: center;
   }
-  .content-4 {
+  .content-5 {
     align-items: center;
     flex-direction: column !important;
   }

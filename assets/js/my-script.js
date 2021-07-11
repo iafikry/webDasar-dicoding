@@ -23,3 +23,11 @@ function closeMenu() {
     document.getElementById("btn-open").style.color = "#fff";
     document.getElementById("btn-close").style.display = "none";
 }
+function openProfile() {
+    document.getElementById("aside-menu").style.width = "100%";
+    console.log("kebuka");
+}
+function closeProfile() {
+    document.getElementById("aside-menu").style.width = "0px";
+    console.log("tutup");
+}

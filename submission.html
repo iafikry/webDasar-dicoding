@@ -10,7 +10,7 @@
     <title>Submission | iafikry</title>
 </head>
 <body>
-    <header>
+    <header id="head">
         <nav class="header" id="header">
             <div class="header-logo f-align-items-center">
                 <div class="container">
@@ -32,14 +32,36 @@
                 <div class="container">
                     <ul class="menu-list" id="menu-list">
                         <li> <a href="#" id="home" class="menu-item">Home</a> </li>
-                        <li> <a href="#" id="about" class="menu-item">About Me</a> </li>
-                        <li> <a href="#" id="menu-2" class="menu-item">Isi apaan lagi y</a> </li>
-                        <li> <a href="#" id="menu-3" class="menu-item">Dahlah</a> </li>
+                        <li> <a href="#" onclick="openProfile()" id="about" class="menu-item">About Me</a> </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <aside id="aside-menu" class="aside">
+        <div class="container">
+            <div>
+                <button type="button" class="btn btn-close-aside" id="btn-close-aside" onclick="closeProfile()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="box box-profil" id="profil">
+                <img src="assets/image/me.png" class="img-profile" alt="foto-profil">
+                <div class="box-body">
+                    <p class="box-subtitle"> <strong>About Me</strong> </p>
+                    <div class="row f-justify-content-start f-align-items-center">
+                        <div class="vertical-line"></div>
+                        <p class="box-text">Ibnu Ahsanul Fikry</p>
+                    </div>
+                    <div class="row f-justify-content-start f-align-items-center">
+                        <div class="vertical-line"></div>
+                        <p class="box-text">iafikry30@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <main>
         <section class="welcome">
@@ -84,7 +106,7 @@
                 </div>
                 <div class="row text-center f-justify-content-center" style="padding: 3rem 0px;">
                     <p class="box-text" style="width: 55rem;">So, you still need another reasons why you should have a cat?</p>
-                    <span class="box-text">All right, we'll give you more</span>
+                    <p style="padding-top: 2.5rem;" class="box-text">All right, we'll give you more</p>
                 </div>
             </div>
         </section>
@@ -98,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row section-2 f-justify-content-evenly">
+                <div class="row f-justify-content-center">
                     <div class="box content-3 flex-col">
                         <img src="assets/image/cat/cat-2.jpg" alt="koceng" id="cat-img-4">
                         <div class="box-body">
@@ -107,8 +129,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="padding-bottom: 3rem;">
-                    <div class="box flex-col" style="width: 100%;">
+                <div class="row" id="row-content-4" style="padding-bottom: 3rem;">
+                    <div class="box flex-col content-4">
                         <div class="box-body">
                             <span class="box-text">"Okay but where is <strong>Kamehameha?</strong>"</span>
                             <div class="vertical-line"></div>
@@ -122,7 +144,7 @@
         <section class="section-3">
             <div class="container">
                 <div class="row">
-                    <div class="box content-4 flex-row">
+                    <div class="box content-5 flex-row">
                         <div class="box-body">
                             <p class="box-text">That's it! Those are a few reasons why <strong>you should have a cat.</strong></p>
                             <hr class="horizontal-line">
@@ -134,19 +156,7 @@
         </section>
     </main>
     
-    <aside>
-        <div class="container">
-            <div class="box box-profil" id="profil">
-                <img src="assets/image/me.jpg" class="img-profile" alt="foto-profil" width="350">
-                <div class="box-body">
-                    <p class="box-subtitle">About Me</p>
-                    <hr class="horizontal-line">
-                    <p class="box-text">Ibnu Ahsanul Fikry</p>
-                    <p class="box-text">iafikry30@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </aside>
+    
 
     <footer>
         <img src="assets/image/waves-footer-2.svg " class="img-footer" alt="footer" width="100%">
@@ -174,5 +184,26 @@
         </div>
     </footer>
     <script src="assets/js/my-script.js"></script>
+    <script>
+        let prevScrollPosition = window.pageYOffset;
+        window.onscroll = function() {
+        let currentScrollPosition = window.pageYOffset;
+        console.info("==== Prev ====");
+        console.log(prevScrollPosition);
+        console.info("==== Current ====");
+        console.log(currentScrollPosition);
+        if (prevScrollPosition > currentScrollPosition) {
+            document.getElementById("head").style.top = "0px";
+            if (prevScrollPosition > 100) {
+                document.getElementById("header").style.backgroundColor = "#1B1717";
+            } else {
+                document.getElementById("header").style.backgroundColor = "transparent";
+            }
+        } else {
+            document.getElementById("head").style.top = "-100%";
+        }
+        prevScrollPosition = currentScrollPosition;
+        };
+    </script>
 </body>
 </html>
