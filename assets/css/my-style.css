@@ -66,9 +66,14 @@ body {
 }
 .btn-close-aside {
   color: #1B1717;
-  font-size: 1.5rem;
   float: right;
   display: block;
+  position: relative;
+  bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+.btn-close-aside:hover{
+  cursor: pointer;
 }
 .box {
   display: flex;
@@ -88,7 +93,7 @@ body {
   flex: 1 1 auto;
 }
 .box-profil {
-  flex-direction: row !important;
+  flex-direction: row;
   align-content: flex-start;
 }
 .button-home {
@@ -165,7 +170,7 @@ header{
   z-index: 5;
   display: block;
   width: 100%;
-  transition: top 0.5s;
+  transition: all 0.5s;
 }
 .header {
   display: flex;
@@ -192,6 +197,10 @@ a.header-title {
 .img-footer {
   position: relative;
   top: 1rem;
+}
+.img-profile {
+  border: 1px solid transparent;
+  border-radius: 50% !important;
 }
 .menu-list{
   display: flex;
@@ -266,20 +275,16 @@ section.pattern-2{
     align-items: flex-start;
   }
   .box-profil .box-body{
-    padding: 0 2.5rem;
     line-height: 0.5;
-  }
-  .box-profil .box-text {
-    padding-left: 1.5rem;
-  }
-  .box-profil .vertical-line {
-    height: 50px;
   }
   .box-subtitle {
     font-size: 2.3rem;
   }
   .box-text {
     font-size: 3rem;
+  }
+  .btn-close-aside {
+    font-size: 2rem;
   }
   #cat-img-1 {
     width: 450px;
@@ -304,10 +309,11 @@ section.pattern-2{
     margin-top: 3rem;
   }
   .content-3 {
-    margin-top: 2rem;
+    margin-top: 10rem;
     width: 50rem;
   }
   .content-4 {
+    margin-top: 7rem;
     width: 40rem;
   }
   a.header-title {
@@ -316,11 +322,6 @@ section.pattern-2{
   .img-logo {
     width: 65px;
     height: 65px;
-  }
-  .img-profile {
-    /* border: 1px solid #1B1717; */
-    border: 1px solid transparent;
-    border-radius: 50% !important;
   }
   #konten-1{
     padding-top: 10rem;
@@ -358,10 +359,16 @@ section.pattern-2{
   .section-3 {
     margin-top: 10rem;
   }
+  span.vertical-line {
+    font-size: 4rem;
+  }
 }
 
 /* hp potrait */
 @media (max-width: 575.98px) {
+  .aside {
+    background-image: url('../image/layered-steps-haikei.svg');
+  }
   .banner-caption {
     top: 13%;
     bottom: 15%;
@@ -384,10 +391,11 @@ section.pattern-2{
     flex-direction: column;
   }
   .box-profil {
+    flex-direction: column;
     margin-top: 4rem;
   }
   .box-profil .box-body{
-    padding: 0 1rem;
+    padding: 1.5rem 0rem;
     line-height: 0.5;
   }
   .box-footer {
@@ -437,6 +445,9 @@ section.pattern-2{
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-align: center;
+    align-items: center;
+  }
+  .content-4 {
     align-items: center;
   }
   .content-5 {
@@ -501,8 +512,173 @@ section.pattern-2{
   .pattern-2 {
     padding-top: 2rem !important;
   }
+  #row-content-4 {
+    text-align: center;
+    justify-content: center !important;
+  }
   .section-3 {
     margin-top: 2rem;
+  }
+  span.vertical-line {
+    font-size: 2.5rem;
+  }
+  .tribute-text {
+    font-size: 10px;
+  }
+  .vertical-line{
+    border-left: 5px solid #1B1717;
+    height: 50px;
+  }
+}
+
+/* tablet/ipad */
+@media (min-width: 768px) AND (max-width: 991.98px) { 
+  .aside {
+    background-image:  url('../image/layered-steps-haikei.svg');
+  }
+  .banner-caption {
+    left: 20%;
+    right: 20%;
+  }
+  .banner-caption h1{
+    font-size: 4rem;
+  }
+  .banner-img{
+    width: 100%;
+    height: 670px!important;
+  }
+  .banner-img-hp {
+    display: none;
+  }
+  .box {
+    flex-direction: row;
+  }
+  .box-profil {
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+  .box-profil .box-body{
+    padding: 0rem 1.5rem;
+    line-height: 0.5;
+  }
+  .box-footer {
+    flex-direction: row !important;
+  }
+  .box-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .box.section-1 {
+    align-items: flex-start !important;
+  }
+  .box-subtitle {
+    font-weight: bold;
+  }
+  .box-text {
+    font-size: 1.3rem;
+  }
+  .button-home {
+    padding: 0.5rem 0.8rem;
+    font-size: 10px;
+  }
+  #cat-img-1 {
+    width: 200px;
+  }
+  #cat-img-2 {
+    width: 200px;
+  }
+  #cat-img-3{
+    width: 160px;
+  }
+  #cat-img-4{
+    width: 230px;
+  }
+  #cat-img-5{
+    width: 200px;
+  }
+  #cat-img-6{
+    width: 170px;
+  }
+  .content-2 {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .content-3 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: row !important;
+  }
+  .content-4 {
+    align-items: center;
+    flex-direction: row-reverse !important;
+  }
+  .content-5 {
+    align-items: center;
+    flex-direction: row !important;
+  }
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .footer-logo {
+    width: 25px;
+  }
+  .footer .box-body p {
+    font-size: 10px;
+  }
+  a.header-title {
+    font-size: 2rem;
+  }
+  .header-logo .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .horizontal-line {
+    border: 2px solid #1B1717;
+    width: 50px;
+  }
+  .hr-section-2 {
+    display: none !important;
+  }
+  .img-logo  {
+    height: 65px;
+    width: 30px !important;
+  }
+  .img-profile {
+    width: 150px;
+    height: 155px;
+  }
+  #konten-1 {
+    padding-top: 3rem;
+  }
+  .menu-hamburger {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+  }
+  .menu-list {
+    flex-direction: row;
+    padding: 0px;
+  }
+  .menu-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .pattern-2 {
+    padding-top: 2rem !important;
+  }
+  #row-content-4 {
+    text-align: left;
+    justify-content: center !important;
+  }
+  .section-3 {
+    margin-top: 2rem;
+  }
+  span.vertical-line {
+    font-size: 2.5rem;
   }
   .tribute-text {
     font-size: 10px;
