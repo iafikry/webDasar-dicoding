@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form World</title>
+    <style>
+        .contents {
+             position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+            border-width:2px;
+            padding : 8px;
+        }
+        .form-element{
+            margin: 8px;
+            align-items:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <h2 align="center">Input Event Form</h2>
+        <div class="formContent">
+            <form autocomplete="off" id="formDataDiri">
+                <div class="form-element" id="fieldName">
+                    <label for="nama">Nama Panggilan</label><br>
+                    <input type="text" id="inputNamaPanggilan" name="nama" placeholder="Nama Panggilan Anda" maxlength="15"> <br>
+                    <label for="sisaKarakter" id="notifikasiSisaKarakter">Sisa karakter <span id="sisaKarakter"></span></label>
+                </div>
+
+                <div class="form-element" id="fieldCopy">
+                    <label for="copy"><i>Copy</i> Tulisan ini:</label><br>
+                    <input type="text" id="inputCopy" name="copy" value="Hello world" disabled><br>
+                </div>
+
+                <div class="form-element" id="fieldPaste">
+                    <label for="paste"><i>Paste</i> tulisan di sini:</label><br>
+                    <input type="text" id="inputPaste" name="paste" placeholder="Paste sesuatu di sini"><br>
+                </div>
+
+                <div class="form-element" id="fieldCaptcha">
+                    <label for="captcha">Tulis <i>captcha</i> berikut:</label><br>
+                    <img src="https://i.ibb.co/yy59QPB/Captcha.png" alt="Captcha"><br>
+                    <input type="text" id="inputCaptcha" name="captcha" placeholder="Tulis captcha di sini"><br>
+                    <p>Tekan Enter pada keyboard jika sudah selesai menulis <i>captcha</i></p>
+                </div>
+
+                <div class="form-element" align="center">
+                    <input type="submit" value="Submit data" id="submitButton" disabled>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+           const inputMaxLengthOnLoad = document.getElementById("inputNamaPanggilan").maxLength;
+           document.getElementById("sisaKarakter").innerText = inputMaxLengthOnLoad; 
+        });
+    </script>
+</body>
+</html>
