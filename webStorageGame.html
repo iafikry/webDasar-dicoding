@@ -104,7 +104,7 @@
                 <h3>Selamat Tebakan Anda Benar!</h3>
                 <h3>Jawabannya adalah:</h3>
                 <h1>"<span id="session-true-answer-field"></span>"</h1>
-                <h3><i></i>Refresh laman ini untuk mencoba lagi</h3>
+                <h3><i>Refresh laman ini untuk mencoba lagi</i></h3>
             </div>
         </div>
 
@@ -207,21 +207,21 @@
         });
         
         answerButton1.addEventListener('click', function () { 
-            sessionTrueAnswerField.innerText += "1";
+            sessionUserAnswerField.innerText += "1";
             if (sessionUserAnswerField.innerText.length == 3) {
                 checkAnswer(sessionUserAnswerField.innerText);
             }
          });
 
         answerButton2.addEventListener('click', function () { 
-            sessionTrueAnswerField.innerText += "2";
+            sessionUserAnswerField.innerText += "2";
             if (sessionUserAnswerField.innerText.length == 3) {
                 checkAnswer(sessionUserAnswerField.innerText);
             }
          });
 
         answerButton3.addEventListener('click', function () { 
-            sessionTrueAnswerField.innerText += "3";
+            sessionUserAnswerField.innerText += "3";
             if (sessionUserAnswerField.innerText.length == 3) {
                 checkAnswer(sessionUserAnswerField.innerText);
             }
@@ -260,6 +260,17 @@
             sessionUserWrongAnswerField.innerText = "";
             sessionStorage.setItem(sessionUserAttempsKey, 0);
             sessionUserAttempsField.innerText = sessionStorage.getItem(sessionUserAttempsKey);
+          });
+
+
+          //hapus sessionStorage dan localStorage
+          destroyDataButton.addEventListener('click', function () {
+              sessionStorage.removeItem(sessionAnswerKey);
+              sessionStorage.removeItem(sessionUserAttempsKey);
+              sessionStorage.removeItem(sessionUserIsPlayingKey);
+              localStorage.removeItem(localTotalVictoryKey);
+              localStorage.removeItem(localMaximumAttempsKey);
+              alert('Mohon untuk me-refresh laman ini kembali');
           });
     </script>
 </body>
